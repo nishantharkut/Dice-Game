@@ -1,4 +1,4 @@
-* {
+body {
     background-color: rgb(27, 27, 27);
     padding: 0;
     margin: 0;
@@ -10,7 +10,7 @@ h1 {
     text-align: center;
     color: greenyellow;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 4%;
+    padding: 2%;
     font-size: 60px;
 }
 
@@ -21,15 +21,41 @@ h1 {
     gap: 20px;
 }
 
-.rectangle {
-    background-color: darkred;
-    height: 200px;
-    width: 200px;
-}
-
 footer {
     margin-top: 8%;
     text-align: center;
     padding: 3em;
     display: relative;
+}
+
+/* Styles for the dialog box */
+.dialog {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* On top */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Center the dialog */
+    width: 80%;
+    max-width: 300px;
+    background-color: #333;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
 }
