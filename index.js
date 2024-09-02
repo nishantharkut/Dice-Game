@@ -18,5 +18,16 @@ if (valLeft > valRight) {
     winner = "It's a tie!";
 }
 
-// Display the winner in a dialog box
-alert(winner);
+// Function to display the winner in the custom dialog box
+function showWinnerDialog() {
+    document.getElementById("winnerText").textContent = winner;
+    document.getElementById("winnerDialog").style.display = "block";
+}
+
+// Delay showing the dialog box by 1 second
+setTimeout(showWinnerDialog, 500);
+
+// Function to close the dialog
+function closeDialog() {
+    document.getElementById("winnerDialog").style.display = "none";
+}
