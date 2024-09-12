@@ -8,12 +8,24 @@
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
   </head>
   <body>
-    <h1>Refresh Me!</h1>
+    <h1>Let's Roll the Dice!</h1>
+
+    <!-- Player name inputs -->
+    <div class="input-container">
+      <input type="text" id="player1" placeholder="Enter Player 1 name" />
+      <input type="text" id="player2" placeholder="Enter Player 2 name" />
+    </div>
+
     <div class="container">
-      <h3>Player 1</h3>
-      <img id="val1" src="./images/dice1.png" alt="">
-      <h3>Player 2</h3>
-      <img id="val2" src="./images/dice1.png" alt="">
+      <h3 id="player1Name">Player 1</h3>
+      <img id="val1" src="./images/dice1.png" alt="dice for player 1">
+      <h3 id="player2Name">Player 2</h3>
+      <img id="val2" src="./images/dice1.png" alt="dice for player 2">
+    </div>
+
+    <!-- Roll Dice Button -->
+    <div class="button-container">
+      <button id="rollDice" onclick="rollDice()">Roll the Dice!</button>
     </div>
 
     <!-- Dialog box for displaying the winner -->
