@@ -5,7 +5,7 @@ body {
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-attachment: fixed; /* Makes the background image fixed while scrolling */
-    color: white;
+    color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -25,7 +25,7 @@ body::before {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    filter: blur(8px); /* Adjust the blur amount here */
+    filter: blur(100px); /* Adjust the blur amount here */
     z-index: -1; /* Ensures the pseudo-element is behind the content */
 }
 
@@ -49,8 +49,8 @@ input {
     font-size: 18px;
     border-radius: 5px;
     border: 2px solid greenyellow;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    background-color: rgb(0 0 0 / 15%);
+    color: #ffffff;
     width: 250px;
 }
 
@@ -67,6 +67,7 @@ footer {
     margin-top: 5%;
     text-align: center;
     padding: 1.5em;
+    color: white;
 }
 
 /* Fancy Button Styles */
@@ -130,18 +131,18 @@ footer {
     transform: translate(-50%, -50%);
     width: 90%;
     max-width: 300px;
-    background-color: #333;
+    background-color: greenyellow;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #000000;
     border-radius: 10px;
     text-align: center;
-    color: white;
+    color: rgb(8, 8, 8);
     opacity: 0;
     animation: fadeIn 0.5s forwards;
 }
 
 .close-button {
-    color: #aaa;
+    color: #ffffff;
     float: right;
     font-size: 28px;
     font-weight: bold;
