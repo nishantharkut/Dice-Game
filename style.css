@@ -12,7 +12,7 @@ h1 {
     color: greenyellow;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 2%;
-    font-size: 60px;
+    font-size: 4vw; /* Make the font size scale with the viewport */
     animation: bounce 2s infinite;
 }
 
@@ -22,39 +22,77 @@ h1 {
     align-items: center;
     gap: 20px;
     padding: 2%;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Ensures the items wrap on smaller screens */
+}
+
+.container h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.container img {
+    width: 150px;
+    height: 150px;
+    transition: transform 0.5s ease;
 }
 
 footer {
-    margin-top: 8%;
+    margin-top: 5%;
     text-align: center;
-    padding: 3em;
+    padding: 1.5em;
 }
 
 /* Responsive Styles */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 6vw; /* Scale down font for tablets */
+    }
+
+    .container img {
+        width: 120px;
+        height: 120px; /* Smaller images for tablets */
+    }
+
+    footer {
+        font-size: 1rem;
+        padding: 1em;
+    }
+}
+
 @media (max-width: 768px) {
     h1 {
-        font-size: 40px;
+        font-size: 7vw;
     }
 
     .container {
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically for better readability */
+        gap: 10px;
     }
 
-    img {
-        width: 80px;
-        height: 80px;
+    .container img {
+        width: 100px;
+        height: 100px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 0.5em;
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 30px;
+        font-size: 8vw; /* Further scale down for small screens */
     }
 
-    img {
-        width: 60px;
-        height: 60px;
+    .container img {
+        width: 80px;
+        height: 80px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 0.3em;
     }
 }
 
@@ -66,7 +104,7 @@ footer {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 90%;
     max-width: 300px;
     background-color: #333;
     padding: 20px;
@@ -110,10 +148,13 @@ footer {
     }
 }
 
-img {
-    transition: transform 0.5s ease;
-}
-
 img:hover {
     transform: rotate(360deg);
+}
+
+/* Footer Adjustments */
+footer {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
 }
