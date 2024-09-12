@@ -33,7 +33,7 @@ h1 {
     text-align: center;
     color: greenyellow;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 2%;
+    
     font-size: 4vw;
     animation: bounce 2s infinite;
 }
@@ -64,9 +64,13 @@ input {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    left:0;
+    padding-bottom: 10px; 
+    width: 100%;
     margin-top: 5%;
     text-align: center;
-    padding: 1.5em;
     color: white;
 }
 
@@ -173,6 +177,9 @@ footer {
     }
 }
 
+img{
+    transition: transform 0.5s ease;
+}
 img:hover {
     transform: rotate(360deg);
 }
