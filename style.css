@@ -12,8 +12,24 @@ h1 {
     color: greenyellow;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 2%;
-    font-size: 4vw; /* Make the font size scale with the viewport */
+    font-size: 4vw;
     animation: bounce 2s infinite;
+}
+
+.input-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid greenyellow;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 250px;
 }
 
 .container {
@@ -22,18 +38,7 @@ h1 {
     align-items: center;
     gap: 20px;
     padding: 2%;
-    flex-wrap: wrap; /* Ensures the items wrap on smaller screens */
-}
-
-.container h3 {
-    text-align: center;
-    margin: 10px 0;
-}
-
-.container img {
-    width: 150px;
-    height: 150px;
-    transition: transform 0.5s ease;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -42,30 +47,38 @@ footer {
     padding: 1.5em;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    h1 {
-        font-size: 6vw; /* Scale down font for tablets */
-    }
-
-    .container img {
-        width: 120px;
-        height: 120px; /* Smaller images for tablets */
-    }
-
-    footer {
-        font-size: 1rem;
-        padding: 1em;
-    }
+/* Fancy Button Styles */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
 }
 
+#rollDice {
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+    background: linear-gradient(45deg, #ff0099, #493240);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(255, 0, 153, 0.75);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#rollDice:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff3399, #352e5e);
+    box-shadow: 0px 6px 20px rgba(255, 0, 153, 0.85);
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     h1 {
-        font-size: 7vw;
+        font-size: 6vw;
     }
 
     .container {
-        flex-direction: column; /* Stack items vertically for better readability */
+        flex-direction: column;
         gap: 10px;
     }
 
@@ -74,25 +87,14 @@ footer {
         height: 100px;
     }
 
-    footer {
-        font-size: 0.9rem;
-        padding: 0.5em;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 8vw; /* Further scale down for small screens */
+    input {
+        width: 200px;
+        font-size: 16px;
     }
 
-    .container img {
-        width: 80px;
-        height: 80px;
-    }
-
-    footer {
-        font-size: 0.8rem;
-        padding: 0.3em;
+    #rollDice {
+        font-size: 18px;
+        padding: 10px 20px;
     }
 }
 
@@ -152,7 +154,6 @@ img:hover {
     transform: rotate(360deg);
 }
 
-/* Footer Adjustments */
 footer {
     font-size: 1rem;
     line-height: 1.5;
