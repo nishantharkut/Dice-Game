@@ -1,17 +1,19 @@
+/* Base Styles */
 body {
     background-color: rgb(27, 27, 27);
     padding: 0;
     margin: 0;
     color: white;
+    font-family: 'Arial', sans-serif;
 }
 
 h1 {
-    position: relative;
     text-align: center;
     color: greenyellow;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 2%;
     font-size: 60px;
+    animation: bounce 2s infinite;
 }
 
 .container {
@@ -19,23 +21,51 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 2%;
+    flex-wrap: wrap;
 }
 
 footer {
     margin-top: 8%;
     text-align: center;
     padding: 3em;
-    display: relative;
 }
 
-/* Styles for the dialog box */
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Dialog Box */
 .dialog {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
-    z-index: 1; /* On top */
+    z-index: 1;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); /* Center the dialog */
+    transform: translate(-50%, -50%);
     width: 80%;
     max-width: 300px;
     background-color: #333;
@@ -44,6 +74,8 @@ footer {
     border-radius: 10px;
     text-align: center;
     color: white;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
 }
 
 .close-button {
@@ -56,6 +88,32 @@ footer {
 .close-button:hover,
 .close-button:focus {
     color: #fff;
-    text-decoration: none;
     cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+img {
+    transition: transform 0.5s ease;
+}
+
+img:hover {
+    transform: rotate(360deg);
 }
