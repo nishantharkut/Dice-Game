@@ -32,8 +32,8 @@ function rollDice() {
     document.getElementById("winnerDialog").style.display = "block";
 
     setTimeout(() => {
-        dialog.style.display = "none";
-    }, 5000);
+        document.getElementById("winnerDialog").style.display = "none";
+    }, 3000);
 }
 
 // Function to close the dialog
