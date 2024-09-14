@@ -30,6 +30,10 @@ function rollDice() {
     // Display the winner in the dialog box
     document.getElementById("winnerText").textContent = winner;
     document.getElementById("winnerDialog").style.display = "block";
+
+    setTimeout(() => {
+        dialog.style.display = "none";
+    }, 5000);
 }
 
 // Function to close the dialog
