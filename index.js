@@ -29,11 +29,13 @@ function rollDice() {
 
     // Display the winner in the dialog box
     document.getElementById("winnerText").textContent = winner;
-    document.getElementById("winnerDialog").style.display = "block";
+    const dialog = document.getElementById("winnerDialog");
+    dialog.style.display = "block";
 
+    // Automatically close the dialog after 5 seconds
     setTimeout(() => {
-        document.getElementById("winnerDialog").style.display = "none";
-    }, 3000);
+        dialog.style.display = "none";
+    }, 5000); // 5000ms = 5 seconds
 }
 
 // Function to close the dialog
